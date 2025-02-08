@@ -1,0 +1,86 @@
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <meta http-equiv="X-UA-Compatible" content="ie=edge" />
+    <title>Infrastructure Project Suggestion Tool</title>
+    <link rel="stylesheet" href="styles.css" />
+  </head>
+  <body>
+    <div class="container">
+      <header>
+        <h1>Infrastructure Project Suggestion Tool</h1>
+        <p>Get smart suggestions for building methods and maintenance plans</p>
+      </header>
+
+      <div class="form-container">
+        <form action="/submit" method="POST">
+          <div class="form-group">
+            <label for="project-type">Project Type:</label>
+            <select id="project-type" name="project-type" required>
+              <option value="">Select Project Type</option>
+              <option value="building">Building</option>
+              <option value="bridge">Bridge</option>
+              <option value="tunnel">Tunnel</option>
+              <option value="dam">Dam</option>
+            </select>
+          </div>
+
+          <div class="form-group">
+            <label for="location">Location:</label>
+            <input
+              type="text"
+              id="location"
+              name="location"
+              placeholder="Enter region"
+              required
+            />
+          </div>
+
+          <div class="form-group">
+            <label for="budget">Budget ($):</label>
+            <input
+              type="number"
+              id="budget"
+              name="budget"
+              placeholder="Enter budget"
+              required
+            />
+          </div>
+
+          <div class="form-group">
+            <label for="materials">Preferred Materials:</label>
+            <input
+              type="text"
+              id="materials"
+              name="materials"
+              placeholder="E.g., Concrete, Steel"
+              required
+            />
+          </div>
+
+          <div class="form-group">
+            <label for="existing-issues"
+              >Existing Structure Issues (if any):</label
+            >
+            <textarea
+              id="existing-issues"
+              name="existing-issues"
+              placeholder="Describe issues (e.g., cracks, leaks, etc.)"
+            ></textarea>
+          </div>
+
+          <button type="submit">Get Suggestions</button>
+          <button type="button" onclick="browseWeb()">Browse the Web</button>
+        </form>
+      </div>
+    </div>
+
+    <script>
+      function browseWeb() {
+        alert("Browsing the web for more information...");
+      }
+    </script>
+  </body>
+</html>
